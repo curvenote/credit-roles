@@ -1,6 +1,6 @@
 {
   "name": "credit-roles",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Enumeration and normalization of CRT Contributor Roles (https://credit.niso.org/)",
   "keywords": [
     "CREDIT",
