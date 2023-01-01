@@ -21,12 +21,16 @@ import credit, { CreditRole, CreditDescriptions } from 'credit-roles';
 
 // Validate that a string is a role
 credit.validate('contributor'); // true
+
 // Handles British spelling and capicalizations
 credit.normalize('conceptualiSation'); // "Conceptualization"
+
 // Handles different punctuation
 credit.normalize('writing:  original draft'); // "Writing – original draft"
+
 // Show the descriptions in your application
 CreditDescriptions['Supervision']; // Oversight and leadership responsibility...
+
 // An enum for easy access to the roles
 CreditRole.WritingOriginalDraft;
 ```
