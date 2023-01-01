@@ -8,6 +8,7 @@
   ],
   "author": "Rowan Cockett <rowan@curvenote.com>",
   "license": "MIT",
+  "sideEffects": false,
   "publishConfig": {
     "access": "public"
   },
