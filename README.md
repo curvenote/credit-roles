@@ -22,7 +22,7 @@ import credit, { CreditRole, CreditDescriptions } from 'credit-roles';
 // Validate that a string is a role
 credit.validate('contributor'); // true
 
-// Handles British spelling and capicalizations
+// Handles British spelling and capitalizations
 credit.normalize('conceptualiSation'); // "Conceptualization"
 
 // Handles different punctuation
