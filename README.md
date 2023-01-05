@@ -6,7 +6,7 @@
 
 > CRediT (Contributor Roles Taxonomy) is a high-level taxonomy, including 14 roles, that can be used to represent the roles typically played by contributors to research outputs. The roles describe each contributor’s specific contribution to the scholarly output. (https://credit.niso.org/)
 
-A utility for validating [CRT Contributor Roles](https://credit.niso.org/) in your application, building canonical URLS, and showing descriptions.
+A utility for validating [CRT Contributor Roles](https://credit.niso.org/) in your application, building canonical URLs, and showing descriptions.
 
 ```shell
 npm install credit-roles
