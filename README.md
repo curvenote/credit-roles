@@ -17,7 +17,7 @@ The library has **no dependencies**, and is helpful in validating, normalizing a
 ## Overview & Usage
 
 ```ts
-import credit, { CreditRole, CreditDescriptions } from 'credit-roles';
+import { credit, CreditRole, CreditDescriptions } from 'credit-roles';
 
 // Validate that a string is a role
 credit.validate('contributor'); // true
