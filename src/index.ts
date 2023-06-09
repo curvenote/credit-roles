@@ -84,7 +84,10 @@ const STANDARDIZED_ROLES: Record<string, CreditRole> = Object.fromEntries(
   ROLES.map((v) => [standardize(v), v]),
 );
 
-function normalize(value?: CreditRole | string | null, opts?: Options): CreditRole | undefined {
+export function normalize(
+  value?: CreditRole | string | null,
+  opts?: Options,
+): CreditRole | undefined {
   if (!value) return undefined;
   if (ROLES.includes(value as CreditRole)) return value as CreditRole;
   if (opts?.strict) return undefined;
@@ -97,7 +100,7 @@ function normalize(value?: CreditRole | string | null, opts?: Options): CreditRo
  * @param value
  * @returns true if CRediT role is valid
  */
-function validate(value?: CreditRole | string | null, opts?: Options): boolean {
+export function validate(value?: CreditRole | string | null, opts?: Options): boolean {
   if (!value) return false;
   return !!normalize(value, opts);
 }
@@ -108,17 +111,15 @@ function validate(value?: CreditRole | string | null, opts?: Options): boolean {
  * @param value
  * @returns the CRediT role as a string
  */
-function buildUrl(value?: CreditRole | string | null, opts?: Options): string | undefined {
+export function buildUrl(value?: CreditRole | string | null, opts?: Options): string | undefined {
   const role = normalize(value, opts);
   if (!role) return undefined;
   const url = role.toLowerCase().replace('– ', '').replace('& ', '').replaceAll(' ', '-');
   return `${CREDIT_URL}contributor-roles/${url}/`;
 }
 
-const credit = {
+export const credit = {
   validate,
   normalize,
   buildUrl,
 };
-
-export default credit;

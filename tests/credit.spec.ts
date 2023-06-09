@@ -1,4 +1,5 @@
-import credit from '../src';
+import { describe, expect, test } from 'vitest';
+import { credit } from '../src';
 
 describe('Credit Roles', () => {
   test.each([
