@@ -62,6 +62,16 @@ export const CreditDescriptions: Record<CreditRole, string> = {
  */
 export const ROLES = Object.keys(CreditDescriptions) as CreditRole[]; // enums are not easy to index
 
+const ALIAS_ROLES: Record<string, CreditRole> = {
+  writing: CreditRole.WritingOriginalDraft,
+  editing: CreditRole.WritingReviewEditing,
+  review: CreditRole.WritingReviewEditing,
+  analysis: CreditRole.FormalAnalysis,
+  funding: CreditRole.FundingAcquisition,
+  admin: CreditRole.ProjectAdministration,
+  administration: CreditRole.ProjectAdministration,
+};
+
 /**
  * Standardize various strings to a common string with british spelling, not for external use.
  */
@@ -91,7 +101,9 @@ export function normalize(
   if (!value) return undefined;
   if (ROLES.includes(value as CreditRole)) return value as CreditRole;
   if (opts?.strict) return undefined;
-  return STANDARDIZED_ROLES[standardize(value)] ?? undefined;
+  return (
+    STANDARDIZED_ROLES[standardize(value)] ?? ALIAS_ROLES[value.toLowerCase().trim()] ?? undefined
+  );
 }
 
 /**

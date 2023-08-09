@@ -33,6 +33,11 @@ describe('Credit Roles', () => {
     ['writing original draft', 'Writing – original draft'],
     ['writing - original draft', 'Writing – original draft'],
     ['writing: original draft', 'Writing – original draft'],
+    ['writing', 'Writing – original draft'],
+    ['   WRITING  ', 'Writing – original draft'],
+    ['editing', 'Writing – review & editing'],
+    ['review', 'Writing – review & editing'],
+    ['admin', 'Project administration'],
   ])('normalize and validate for %s', (str, role) => {
     expect(credit.validate(str)).toBe(!!role);
     if (role) expect(credit.normalize(str)).toBe(role);

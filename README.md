@@ -47,6 +47,20 @@ CreditRole.WritingOriginalDraft;
 
 - `strict`: only accept normalized CRediT roles when validating or building URLs
 
+## Alias
+
+In addition to british english, incorrect case or punctuation, there are also a number of aliases that can be used for various roles:
+
+| Alias          | Official CRediT Role       |
+| -------------- | -------------------------- |
+| writing        | Writing – original draft   |
+| editing        | Writing – review & editing |
+| review         | Writing – review & editing |
+| analysis       | Formal analysis            |
+| funding        | Funding acquisition        |
+| admin          | Project administration     |
+| administration | Project administration     |
+
 ## References
 
 - https://credit.niso.org/
